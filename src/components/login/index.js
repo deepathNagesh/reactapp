@@ -21,6 +21,13 @@ export default function SignIn() {
         const handleSubmit = (event) => {
           event.preventDefault();
           const data = new FormData(event.currentTarget);
+          if(data.get('email')===''){
+           alert("Please Enter Email");
+           return null ;
+          }if(data.get('password') ===''){
+            alert("Please Enter Password");
+            return null ;
+          }
           console.log(data.get('email'));
              navigate("/admin") ;
            
@@ -41,7 +48,7 @@ export default function SignIn() {
             flexDirection: 'column',
             alignItems: 'center',
            // margin : 8,
-            marginLeft : 1
+           // marginLeft : 1
           }}>
 
         <Typography component="h2" variant="h2">
@@ -103,10 +110,5 @@ export default function SignIn() {
            </ThemeProvider>
     );
 
-// return (
-//   <>
-//   hi
-//     <Outlet/>
-//   </>
-// );
+
   }
