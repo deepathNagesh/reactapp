@@ -8,8 +8,14 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import { useNavigate } from "react-router";
 
 function SubMenuList({ isCollapse, listVal }) {
+
+  const navigate = useNavigate();
+  const handleClickSubMenu = (text) => {
+     navigate(text);
+     };
   return (
     <Box role="presentation">
       <Collapse in={isCollapse}>
@@ -17,7 +23,9 @@ function SubMenuList({ isCollapse, listVal }) {
           {listVal &&
             listVal.map((text, index) => (
               <ListItem key={text}>
-                <ListItemButton>
+                <ListItemButton
+                  onClick={ ()=> handleClickSubMenu(text)}
+                 >
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
