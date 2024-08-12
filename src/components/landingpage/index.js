@@ -13,7 +13,7 @@ export default function Homepage() {
         setShow(false);
     };
     return (
-        <Box display={"flex"}>
+        <Box display={"flex"} sx={{p:2}}>
             <Header hideDrawer={hideDrawer}> </Header>
             <SideBar onShow={show} onClose={onClose}>
             </SideBar>

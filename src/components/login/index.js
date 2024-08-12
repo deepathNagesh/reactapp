@@ -12,6 +12,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, useNavigate } from "react-router";
+import logo from '../../img/got.png'; 
+// import Music from '../../music';
 
 export default function SignIn() {
 
@@ -43,23 +45,31 @@ export default function SignIn() {
  <CssBaseline />
       <Box
           sx={{
-            marginTop: 9,
+            marginTop: 7  ,
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-           // margin : 8,
-           // marginLeft : 1
+            alignItems: 'flex-start',
+            backgroundColor : "#ffffffd6",
+            p:2,
+            borderRadius: 2,
+            borderColor: "#0000000d",
+            borderStyle: "solid",
           }}>
-
-        <Typography component="h2" variant="h2">
-            Sign in
-           </Typography>
+<img height={150} width={150} src={logo} alt="Logo" />
+{/* <Link to="https://github.com/Joeyryanbridges">
+  <Image src="giticon.png" className="githubIcon" />
+</Link> */}
+          
+          {/* <Typography component="h3" variant="h3" >
+              Goat Access
+            </Typography> */}
            <Typography component="h6" variant="h6">
-           Access to portal
+           Goat Access
+           <img height={25} width={25} src={logo} alt="Logo" />
            </Typography>
            <Box component="form" onSubmit={handleSubmit}  noValidate sx={{ mt: 1 }}>
              <TextField
-              margin="normal"
+              margin="dense "
               required
               fullWidth
               id="email"
@@ -69,7 +79,7 @@ export default function SignIn() {
               autoFocus
             />
             <TextField
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               name="password"
@@ -86,12 +96,19 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2,backgroundColor :"#31343dd9", 
+                '&:hover': {
+      cursor: 'pointer',
+      backgroundColor: "#22a248eb",
+                }
+
+               }}
             >
-              Sign In
+              Goat In
             </Button>
-            <Grid container>
-              <Grid item xs>
+            
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
                 <Link href="#" variant="body1">
                   Forgot password?
                 </Link>
@@ -102,6 +119,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
             </Grid>
+            {/* <Music> </Music> */}
           </Box>
         
           </Box>
