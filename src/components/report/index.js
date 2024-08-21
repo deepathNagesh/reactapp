@@ -47,10 +47,21 @@ export default function BasicTabs() {
 
   return (
     // 
-    <Box sx={{ width: '100%' }}>
-        <Provider store={store}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+    <Box sx={{ width: '100%' ,background:"white" , 
+        borderColor: "#760e0e2b",
+        borderRadius: "1px",
+        borderStyle: "solid"}}>
+       
+      <Box sx={{ borderBottom: 1, borderColor: 'divider',background:"#80808024" }}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" 
+        
+         textColor="secondary"
+        TabIndicatorProps={{
+            style: {
+              backgroundColor: "##ee3c07c2"
+            }
+          }}
+        >
           <Tab label="List" {...a11yProps(0)} />
           <Tab label="Create" {...a11yProps(1)} />
           <Tab label="Activity" {...a11yProps(2)} />
@@ -68,7 +79,7 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={2}>
         Recent Activity
       </CustomTabPanel>
-      </Provider>
+      
     </Box>
     ///* </Provider> */
   );
