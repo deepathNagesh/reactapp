@@ -15,14 +15,14 @@ function Index() {
           setImg(Goat);
       }else if (displayList==='Lion'){
           setImg(Lion);
-      }else if (displayList==='Cat'){
+      }else if (displayList==='Zebra'){
           setImg(Cat);
       }
     },[displayList])
  
 
   return (
-    <img height={25} width={25} src={img} alt="Logo" />
+    <img height={600} width={600} src={img} alt="Logo" />
   )
 }
 

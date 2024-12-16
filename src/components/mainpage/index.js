@@ -14,9 +14,9 @@ function MainPage() {
         // sx={{display:"flex"}}
         >
         <Typography fontWeight={550} sx={{ marginleft: "26px !important",color:"#161838",p:12,padding: "12px",
-    backgroundColor: "white",borderStyle:"solid",borderColor:"white"}}>Vehicle Data</Typography>
+    backgroundColor: "#A2CA71",borderStyle:"solid",borderColor:"white"}}>Goat Data</Typography>
         {/* <Report> </Report> */}
-        <Box  sx={{display:"flex"}}>
+        <Box  sx={{display:"flex",backgroundColor:"#D7C3F1"}}>
         <TreeView></TreeView>
         <DisplayPic
         // displayImg={'Goat'}

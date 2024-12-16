@@ -9,10 +9,10 @@ import React, { useState } from "react";
 import RadioButtonsGroup from "../radioButton/radioButton";
 
 function SecondLayer({text}) {
-   const [show, setShow] = useState(false);
-   const handleClick = (newValue) => {
-     setShow(!newValue);
-   };
+  //  const [show, setShow] = useState(false);
+  //  const handleClick = (newValue) => {
+  //    setShow(!newValue);
+  //  };
 
    const users = [
     { name: "Goat", age: 25 },
@@ -31,7 +31,7 @@ function SecondLayer({text}) {
     // height :"auto"
      }}
   >
-    <RadioButtonsGroup list={users} />
+    <RadioButtonsGroup list={users} key={text}/>
     {/* {users.map((text) => (
       <ListItem
         key={text.name}

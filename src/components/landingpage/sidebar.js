@@ -30,7 +30,7 @@ function SideBar({ onShow, onClose }) {
 
   const DrawerList = (
     <Box
-      sx={{ width: 200, marginTop: 12 }}
+      sx={{ width: 200, marginTop: 12 ,bgcolor:"#BEDC74",height:"auto"}}
       role="presentation"
       onClick={toggleDrawer(false)}
     >

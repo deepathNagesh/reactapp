@@ -15,7 +15,9 @@ function FirstLayer({ text }) {
   };
   return (
     <div>
-      <ListItemButton  divider={true} onClick={() => handleClick(show)} sx={{display:"flex",flexFlow:"column",background:"white"}}>
+      <ListItemButton  divider={true} onClick={() => handleClick(show)} sx={{display:"flex",flexFlow:"column",background:"#BDE8CA",
+        rotate:"0deg"
+        }}>
         <ListItemText  primary={text.name} sx={{px:0}} ></ListItemText>
       </ListItemButton>
      

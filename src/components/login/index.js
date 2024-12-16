@@ -30,6 +30,7 @@ export default function SignIn() {
             alert("Please Enter Password");
             return null ;
           }
+          localStorage.setItem("userData",data.get('email'));
           console.log(data.get('email'));
              navigate("/admin") ;
            

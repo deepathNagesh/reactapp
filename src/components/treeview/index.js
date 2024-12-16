@@ -22,15 +22,16 @@ function Index() {
 
   return (
 //<Box sx={{Margin:"16px 8px"}}><AccordionExpandIcon ></AccordionExpandIcon> </Box>
-    <>
+    <Box>
     <List
     dense
       sx={{
         display: "flex",
         flexDirection: "column",
         width: "221px",
-        backgroundColor: "#d8460d",
+        backgroundColor: "#0D7C66",
         padding: "2px",
+        rotate:"0deg"
       }}
     >
 
@@ -41,13 +42,16 @@ function Index() {
           sx={{
            // height: "32px",
            // width: "203px",
-            backgroundColor: "#46d6c0b8",
+            backgroundColor: "#41B3A2",
             borderStyle: "outset",
              display: "flex",
              flexFlow: "column",
              alignItems: "flex-start",
             // overflow:'hidden',
-            padding : "1px"
+            padding : "1px",
+            marginTop: "2px",
+            marginBottom: "2px",
+            rotate:'0deg'
             
           }}
         >
@@ -57,7 +61,7 @@ function Index() {
       ))}
     </List>
   
-    </>
+    </Box>
   );
 }
 

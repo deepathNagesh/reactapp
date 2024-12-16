@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { selRadio } from "../../slice/actor";
 
-export default function RadioButtonsGroup({ list }) {
+export default function RadioButtonsGroup({ list,text }) {
 
 
   const dispatch = useDispatch();
@@ -36,16 +36,19 @@ export default function RadioButtonsGroup({ list }) {
         name="radio-buttons-group"
         color="secondary"
         onChange={onChan}
+        key={text}
       >
         {list.map((text,index) => (
           
             <FormControlLabel
              disableTypography
-            sx={{backgroundColor:"#b71313",
+            sx={{backgroundColor:"#D7C3F1",
               //padding:"padding: 0px 24px",
               marginLeft: "0px",
               marginRight: "0px",
-              color:"cyan" 
+              marginBottom: "1px",
+              marginTop: "1px",
+            //  color:"cyan" 
             }} 
               value={text.name}
               control={<Radio />}
